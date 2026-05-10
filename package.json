@@ -1,0 +1,43 @@
+{
+  "name": "eclips-ui",
+  "version": "0.0.1",
+  "description": "A modern, high-performance React component library focused on flexibility, accessibility, and developer experience. Built with customizable primitives, smooth animations, and a clean API to help developers create fast, scalable, and beautiful user interfaces with ease.",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BMOBOX/RustyUI.git"
+  },
+  "author": "BMOBOX",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BMOBOX/RustyUI/issues"
+  },
+  "homepage": "https://github.com/BMOBOX/RustyUI#readme",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^7.0.0",
+    "@rollup/plugin-commonjs": "^29.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^1.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@types/react": "^19.2.14",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "rollup": "^4.60.3",
+    "rollup-plugin-dts": "^6.4.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.8.1"
+  },
+  "peerDependencies": {
+    "react": ">=19.2.6",
+    "react-dom": ">=19.2.6"
+  }
+}

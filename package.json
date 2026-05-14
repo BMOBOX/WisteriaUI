@@ -1,43 +1,78 @@
 {
-  "name": "eclips-ui",
-  "version": "0.0.1",
-  "description": "A modern, high-performance React component library focused on flexibility, accessibility, and developer experience. Built with customizable primitives, smooth animations, and a clean API to help developers create fast, scalable, and beautiful user interfaces with ease.",
-  "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "rollup -c",
-    "prepare": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BMOBOX/RustyUI.git"
-  },
-  "author": "BMOBOX",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/BMOBOX/RustyUI/issues"
-  },
-  "homepage": "https://github.com/BMOBOX/RustyUI#readme",
-  "devDependencies": {
-    "@rollup/plugin-babel": "^7.0.0",
-    "@rollup/plugin-commonjs": "^29.0.2",
-    "@rollup/plugin-node-resolve": "^16.0.3",
-    "@rollup/plugin-terser": "^1.0.0",
-    "@rollup/plugin-typescript": "^12.3.0",
-    "@types/react": "^19.2.14",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
-    "rollup": "^4.60.3",
-    "rollup-plugin-dts": "^6.4.1",
-    "rollup-plugin-postcss": "^4.0.2",
-    "tslib": "^2.8.1"
-  },
-  "peerDependencies": {
-    "react": ">=19.2.6",
-    "react-dom": ">=19.2.6"
-  }
+    "name": "wisteria-ui",
+    "version": "0.0.2",
+    "description": "A modern, high-performance React component library focused on flexibility, accessibility, and developer experience. Built with customizable primitives, smooth animations, and a clean API to help developers create fast, scalable, and beautiful user interfaces with ease.",
+    "type": "module",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "clean": "rm -rf dist",
+        "build:js": "rollup -c",
+        "build": "pnpm run clean && pnpm run build:js",
+        "prepare": "pnpm run build",
+        "test": "jest --watchAll --verbose",
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BMOBOX/WisteriaUI.git"
+    },
+    "author": "BMOBOX",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/BMOBOX/WisteriaUI/issues"
+    },
+    "homepage": "https://github.com/BMOBOX/WisteriaUI#readme",
+    "devDependencies": {
+        "@babel/preset-env": "^7.29.5",
+        "@babel/preset-react": "^7.28.5",
+        "@babel/preset-typescript": "^7.28.5",
+        "@chromatic-com/storybook": "^5.1.2",
+        "@rollup/plugin-babel": "^7.0.0",
+        "@rollup/plugin-commonjs": "^29.0.2",
+        "@rollup/plugin-node-resolve": "^16.0.3",
+        "@rollup/plugin-terser": "^1.0.0",
+        "@rollup/plugin-typescript": "^12.3.0",
+        "@storybook/addon-a11y": "^10.3.6",
+        "@storybook/addon-docs": "^10.3.6",
+        "@storybook/addon-onboarding": "^10.3.6",
+        "@storybook/addon-vitest": "^10.3.6",
+        "@storybook/react-vite": "^10.3.6",
+        "@tailwindcss/cli": "^4.3.0",
+        "@tailwindcss/postcss": "^4.3.0",
+        "@testing-library/jest-dom": "^6.9.1",
+        "@testing-library/react": "^16.3.2",
+        "@testing-library/user-event": "^14.6.1",
+        "@types/jest": "^30.0.0",
+        "@types/react": "^19.2.14",
+        "@vitest/browser-playwright": "^4.1.6",
+        "@vitest/coverage-v8": "^4.1.6",
+        "autoprefixer": "^10.5.0",
+        "jest": "^30.4.2",
+        "jest-environment-jsdom": "^30.4.1",
+        "lucide-react": "^1.14.0",
+        "playwright": "^1.59.1",
+        "postcss": "^8.5.14",
+        "react": "^19.2.6",
+        "react-dom": "^19.2.6",
+        "rollup": "^4.60.3",
+        "rollup-plugin-dts": "^6.4.1",
+        "rollup-plugin-postcss": "^4.0.2",
+        "storybook": "^10.3.6",
+        "tailwindcss": "^4.3.0",
+        "tslib": "^2.8.1",
+        "vitest": "^4.1.6"
+    },
+    "peerDependencies": {
+        "react": "^19.2.6",
+        "react-dom": "^19.2.6"
+    },
+    "dependencies": {
+        "clsx": "^2.1.1",
+        "tailwind-merge": "^3.6.0"
+    }
 }

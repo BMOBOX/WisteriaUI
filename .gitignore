@@ -36,3 +36,4 @@ coverage/
 
 # Storybook
 storybook-static/
+*storybook.log

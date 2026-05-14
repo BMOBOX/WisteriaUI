@@ -1,1 +1,4 @@
-export { default as Page } from "./components/Page"
+import "./styles/index.css";
+
+export { default as Button } from "./components/Button/Button";
+export { default as Breadcrumb } from "./components/Breadcrumb/Breadcrumb";
